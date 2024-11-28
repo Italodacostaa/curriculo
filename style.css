@@ -1,0 +1,256 @@
+:root {
+  --cor-principal: #3498db;
+  --cor-secundaria: #3498db;
+  --cor-fundo: #000000;
+  --fonte-principal: Arial, sans-serif;
+  --fonte-titulo: Montserrat, sans-serif;
+  --transicao: 0.3s;
+  --tamanho-fonte: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(./img/Capa_FrontBack.png);
+  background-size: cover;
+  font-family: var(--fonte-principal);
+  font-size: var(--tamanho-fonte);
+  line-height: 1.5;
+  color: #333;
+  background-color: var(--cor-fundo);
+}
+
+.container {
+  max-width: 50%;
+  margin: 2em auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho {
+  background-color: var(--cor-principal);
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.cabecalho h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--fonte-titulo);
+}
+
+.secao {
+  margin-bottom: 2rem;
+}
+
+.secao .titulo {
+  margin-top: 1rem;
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+}
+
+.sobre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  border: 1px solid #333;
+  margin-top: 1rem;
+  background-color: #f7f7f7;
+  padding: 1.5rem;
+}
+
+.educação {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  border: 1px solid #333;
+  margin-top: 1rem;
+  background-color: #f7f7f7;
+  padding: 1.5rem;
+}
+
+.tecnologias {
+  text-align: center;
+  border-radius: 0.5rem;
+  border: 1px solid #333;
+  margin-top: 1rem;
+  background-color: #f7f7f7;
+  padding: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.categoria {
+  display: inline-block;
+  margin: 1rem;
+  vertical-align: top;
+}
+
+.categoria h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.tecnologia {
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+.tecnologia img {
+  width: 3rem;
+  border-radius: 0.2rem;
+}
+
+.contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid #333;
+  margin-top: 1rem;
+  background-color: #f7f7f7;
+  padding: 1.5rem;
+}
+
+.colunas {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.coluna-esquerda, .coluna-direita {
+  flex-basis: 45%;
+}
+
+.redes-sociais {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.redes-sociais img {
+  width: 2rem;
+  transition: opacity 0.3s;
+}
+
+.redes-sociais a:hover img {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 70%;
+    margin: 1rem auto;
+  }
+  .cabecalho h1 {
+    font-size: 2rem;
+  }
+  .secao .titulo {
+    font-size: 1.2rem;
+  }
+
+  .educação ul {
+    padding: 1rem;
+  }
+
+  .colunas {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .coluna-esquerda, .coluna-direita {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    .coluna-esquerda {
+      order: 1;
+    }
+    
+    .coluna-direita {
+    order: 2;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+  .sobre, .educação, .tecnologias, .contato {
+  padding: 1rem;
+  }
+
+  .sobre p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    }
+
+  .tecnologia img {
+  width: 2rem;
+  }
+
+  .colunas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .coluna-esquerda, .coluna-direita {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .redes-sociais{
+    justify-content: center;
+    align-items: center;
+  }
+  }
+  
+  @media (max-width: 320px) {
+  .container {
+    max-width: 100%;
+  margin: 0.2rem auto;
+  }
+  .cabecalho h1 {
+  font-size: 1.2rem;
+  }
+  .secao .titulo {
+  font-size: 0.9rem;
+  }
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--cor-principal);
+    transition: var(--transicao);
+    }
+    
+    a:hover {
+    color: var(--cor-secundaria);
+    }
+    
+    button, a.button {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .transition {
+    transition: all 0.3s ease;
+    }
